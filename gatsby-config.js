@@ -4,6 +4,7 @@ module.exports = {
     title: "Åre 2021",
   },
   plugins: [
+    "gatsby-theme-material-ui",
     {
       resolve: "gatsby-source-contentful",
       options: {
