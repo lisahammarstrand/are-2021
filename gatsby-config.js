@@ -1,17 +1,21 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Åre 2021",
   },
   plugins: [
-    "gatsby-theme-material-ui",
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "-DLZ4H60Cb3Zng4nMRK3uvmwaHfdaYLeEqILyFmj4ZQ",
-        spaceId: "mt0kvcyico1u",
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    "gatsby-theme-material-ui",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",

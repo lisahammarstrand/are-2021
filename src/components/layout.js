@@ -18,6 +18,7 @@ const Layout = ({ pageTitle, children }) => {
   const classes = useStyles()
   return (
     <>
+      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
@@ -27,8 +28,8 @@ const Layout = ({ pageTitle, children }) => {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <main>
-        <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         {children}
       </main>
       <footer className={classes.footer}>
