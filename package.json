@@ -26,6 +26,7 @@
     "gatsby-source-contentful": "^5.9.0",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-theme-material-ui": "^2.0.1",
+    "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.9.0",
     "istanbul-lib-coverage": "^3.0.0",
     "react": "^17.0.1",

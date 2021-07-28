@@ -24,7 +24,7 @@ const Layout = ({ pageTitle, children }) => {
         <Toolbar>
           <PhotoCamera className={classes.icon} />
           <Typography variant="h6">
-            Åre 2021 Moments
+            Åre 2021
           </Typography>
         </Toolbar>
       </AppBar>
