@@ -41,7 +41,7 @@ const IndexPage = () => {
             Åre 2021
           </Typography>
           <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Ögonblick från säsongen 2021 i Åre. En riktigt bra vinter med mycket snö och fin åkning.
+            Ögonblick från säsongen 2021 i Åre. En fantastisk vinter med mycket snö och fin åkning.
           </Typography>
           <div className={classes.buttons}>
             <Grid container spacing={2} justify="center">
@@ -76,12 +76,12 @@ const IndexPage = () => {
                     <Typography>
                       {edge.node.cardDescription.childMarkdownRemark.rawMarkdownBody}
                     </Typography>
-                    <CardActions>
-                      <Button size="small" color="primary">Se bild</Button>
-                    </CardActions>
                     <Typography variant="caption">
                       {edge.node.cardDate}
                     </Typography>
+                    <CardActions>
+                      <Button size="small" color="primary">Se bild</Button>
+                    </CardActions>
                   </CardContent>
                 </Card>
               </Grid>
