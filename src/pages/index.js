@@ -2,12 +2,12 @@ import { classes } from "istanbul-lib-coverage"
 import * as React from "react"
 import Layout from "../components/layout"
 import { CssBaseLine, Typography, Button, Card, CardActions, CardContent, CardMedia, Container, Grid } from "@material-ui/core"
+import Modal from '@material-ui/core/Modal'
 import useStyles from '../components/styles'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
+import SimpleModal from "../components/modal"
 /* import ImageCard from "../components/imagecard" */
-
-/* const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9] */
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -57,6 +57,7 @@ const IndexPage = () => {
               </Grid>
             </Grid>
           </div>
+          <SimpleModal />
         </Container>
       </div>
       <Container className={classes.cardGrid} maxWidth="md">
@@ -64,6 +65,7 @@ const IndexPage = () => {
           {data.allContentfulImageCard.edges.map((edge) => {
             const image = getImage(edge.node.cardImage)
             return (
+
               <Grid item key={edge} xs="12" sm="6" md="4">
                 <Card className={classes.card}>
                   <CardMedia className={classes.CardMedia}>

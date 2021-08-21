@@ -29,6 +29,17 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: '50px 0'
+  },
+  paper: {
+    position: `absolute`,
+    top: `50%`,
+    left: `50%`,
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    border: `2px solid #000`,
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    transform: `translate(-50%, -50%)`
   }
 }))
 export default useStyles
