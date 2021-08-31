@@ -57,7 +57,6 @@ const IndexPage = () => {
               </Grid>
             </Grid>
           </div>
-          <SimpleModal />
         </Container>
       </div>
       <Container className={classes.cardGrid} maxWidth="md">
@@ -82,7 +81,8 @@ const IndexPage = () => {
                       {edge.node.cardDate}
                     </Typography>
                     <CardActions>
-                      <Button size="small" color="primary">Se bild</Button>
+                      <SimpleModal />
+                      {/* <Button size="small" color="primary">Se bild</Button> */}
                     </CardActions>
                   </CardContent>
                 </Card>
