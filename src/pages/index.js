@@ -82,7 +82,6 @@ const IndexPage = () => {
                     </Typography>
                     <CardActions>
                       <SimpleModal />
-                      {/* <Button size="small" color="primary">Se bild</Button> */}
                     </CardActions>
                   </CardContent>
                 </Card>

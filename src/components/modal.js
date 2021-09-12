@@ -4,10 +4,11 @@ import Modal from '@material-ui/core/Modal'
 import { Button } from '@material-ui/core'
 import { useState } from 'react'
 import useStyles from './styles'
-import { useStaticQuery } from 'gatsby'
+/* import { useStaticQuery, graphql } from 'gatsby' */
+/* import { GatsbyImage, getImage } from 'gatsby-plugin-image' */
+import ModalBody from './modalbody'
 
-
-export default function SimpleModal() {
+const SimpleModal = () => {
 
   const classes = useStyles()
   const [open, setOpen] = useState(false)
@@ -19,14 +20,40 @@ export default function SimpleModal() {
     setOpen(false)
   }
 
-  const body = (
-    <div className={classes.paper}>
-      <h2 id="simple-modal-title">Here is the image</h2>
-      <p id="simple-modal-description">
-        Here is the image description
-      </p>
-    </div>
+  /* const data = useStaticQuery(graphql`
+    {
+      allContentfulImageCard(sort: {fields: cardDate, order: ASC}) {
+        edges {
+          node {
+            cardImage {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
+            cardHeading
+            cardDate
+          }
+        }
+      }
+    }
+    `
   )
+  
+    {
+      data.allContentfulImageCard.edges.map((edge) => {
+        const image = getImage(edge.node.cardImage)
+        const body = (
+        <div className={classes.paper}> 
+            <GatsbyImage image={image} alt={edge.node.cardHeading} />
+            <Typography>
+              {edge.node.cardHeading}
+            </Typography>
+            <Typography variant="caption">
+              {edge.node.cardDate}
+            </Typography>
+            </div> 
+        )
+      }
+      )
+    } */
 
   return (
     <div>
@@ -35,9 +62,13 @@ export default function SimpleModal() {
         open={open}
         onClose={handleClose}
         arialabelledby="simple-modal-title"
-        aria-describedby="simple-modal-description">
-        {body}
+        aria-describedby="simple-modal-description"
+      >
+        <ModalBody />
       </Modal>
     </div>
   )
+
 }
+
+export default SimpleModal
