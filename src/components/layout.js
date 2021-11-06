@@ -34,10 +34,10 @@ const Layout = ({ pageTitle, children }) => {
       </main>
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          Vi gör det igen vintern 2022
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary">
-          Här kommer relevant footer info.
+          Lisa H Produktion
         </Typography>
       </footer>
     </>

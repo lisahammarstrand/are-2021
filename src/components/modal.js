@@ -4,14 +4,12 @@ import Modal from '@material-ui/core/Modal'
 import { Button } from '@material-ui/core'
 import { useState } from 'react'
 import useStyles from './styles'
-/* import { useStaticQuery, graphql } from 'gatsby' */
-/* import { GatsbyImage, getImage } from 'gatsby-plugin-image' */
 import ModalBody from './modalbody'
 
 const SimpleModal = () => {
 
   const classes = useStyles()
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState()
 
   const handleOpen = () => {
     setOpen(true)
@@ -20,44 +18,14 @@ const SimpleModal = () => {
     setOpen(false)
   }
 
-  /* const data = useStaticQuery(graphql`
-    {
-      allContentfulImageCard(sort: {fields: cardDate, order: ASC}) {
-        edges {
-          node {
-            cardImage {
-              gatsbyImageData(layout: CONSTRAINED)
-            }
-            cardHeading
-            cardDate
-          }
-        }
-      }
-    }
-    `
-  )
-  
-    {
-      data.allContentfulImageCard.edges.map((edge) => {
-        const image = getImage(edge.node.cardImage)
-        const body = (
-        <div className={classes.paper}> 
-            <GatsbyImage image={image} alt={edge.node.cardHeading} />
-            <Typography>
-              {edge.node.cardHeading}
-            </Typography>
-            <Typography variant="caption">
-              {edge.node.cardDate}
-            </Typography>
-            </div> 
-        )
-      }
-      )
-    } */
-
   return (
     <div>
-      <Button size="small" color="primary" onClick={handleOpen}>Se bild</Button>
+      <Button
+        size="small"
+        color="primary"
+        onClick={handleOpen}>
+        Se bild
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}

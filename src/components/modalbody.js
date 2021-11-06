@@ -9,7 +9,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const ModalBody = () => {
 
-
   const data = useStaticQuery(graphql`
   {
     allContentfulImageCard(sort: {fields: cardDate, order: ASC}) {
@@ -33,7 +32,7 @@ const ModalBody = () => {
         data.allContentfulImageCard.edges.map((edge) => {
           const image = getImage(edge.node.cardImage)
           return (
-            <div className={classes.paper}>
+            <div key={edge} className={classes.paper}>
               <GatsbyImage image={image} alt={edge.node.cardHeading} />
               <Typography>
                 {edge.node.cardHeading}

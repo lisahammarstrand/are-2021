@@ -41,7 +41,7 @@ const IndexPage = () => {
             Åre 2021
           </Typography>
           <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Ögonblick från säsongen 2021 i Åre. En fantastisk vinter med mycket snö och fin åkning.
+            Ögonblick från säsongen 2021 i Åre. Vilken vinter! Mycket snö och osannolikt fin åkning.
           </Typography>
           <div className={classes.buttons}>
             <Grid container spacing={2} justify="center">
@@ -50,11 +50,11 @@ const IndexPage = () => {
                   Alla bilder
                 </Button>
               </Grid>
-              <Grid item>
+              {/* <Grid item>
                 <Button variant="outlined" color="primary">
                   Alla bilder vinter
                 </Button>
-              </Grid>
+              </Grid> */}
             </Grid>
           </div>
         </Container>

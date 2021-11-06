@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     height: `auto`,
     backgroundColor: theme.palette.background.paper,
     border: `1px solid #000`,
-    boxShadow: theme.shadows[5],
+    boxShadow: theme.shadows[1],
     padding: theme.spacing(4, 4, 3),
     transform: `translate(-50%, -50%)`,
   }
