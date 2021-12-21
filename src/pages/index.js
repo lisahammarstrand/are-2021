@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import SimpleModal from "../components/modal"
 /* import ImageCard from "../components/imagecard" */
+import { Link } from 'gatsby'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -41,14 +42,16 @@ const IndexPage = () => {
             Åre 2021
           </Typography>
           <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Ögonblick från säsongen 2021 i Åre. Vilken vinter! Mycket snö och osannolikt fin åkning.
+            Ögonblick från säsongen 2021 i Åre. Vilken vinter! Ovanligt mycket snö och osannolikt fin åkning.
           </Typography>
           <div className={classes.buttons}>
             <Grid container spacing={2} justify="center">
               <Grid item>
-                <Button variant="contained" color="primary">
-                  Alla bilder
-                </Button>
+                <Link to="/gallery">
+                  <Button variant="contained" color="primary">
+                    Alla bilder
+                  </Button>
+                </Link>
               </Grid>
               {/* <Grid item>
                 <Button variant="outlined" color="primary">

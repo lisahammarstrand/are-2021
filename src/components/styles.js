@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import { LinearScale, ScatterPlot } from '@material-ui/icons'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -7,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6)
   },
   icon: {
-    marginRight: '20px'
+    marginRight: '16px'
   },
   buttons: {
     marginTop: '40px'
@@ -41,6 +42,14 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[1],
     padding: theme.spacing(4, 4, 3),
     transform: `translate(-50%, -50%)`,
+  },
+  link: {
+    textDecoration: `none`,
+    color: `white`,
+    transition: `transform .2s`,
+    '&:hover': {
+      transform: `scale(1.1)`,
+    }
   }
 }))
 export default useStyles
