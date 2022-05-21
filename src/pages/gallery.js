@@ -35,9 +35,7 @@ const ImageGallery = () => {
             const image = getImage(edge.node.cardImage)
             return (
               <Grid item key={edge} xs="12" sm="6" md="4">
-                {/*  <Gallery direction={"column"}> */}
                 <GatsbyImage image={image} alt={edge.node.cardHeading} />
-                {/*  </Gallery> */}
               </Grid>
             )
           }

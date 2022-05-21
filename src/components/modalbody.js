@@ -1,12 +1,11 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
 
 import useStyles from './styles'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-
+/* Hur får man fram bara 1 bild, och rätt bild i resp Modal, nu hämtas alla bilder */
 const ModalBody = () => {
 
   const data = useStaticQuery(graphql`
@@ -16,6 +15,9 @@ const ModalBody = () => {
         node {
           cardImage {
             gatsbyImageData(layout: CONSTRAINED)
+            file {
+              fileName
+            }
           }
           cardHeading
           cardDate
@@ -33,7 +35,10 @@ const ModalBody = () => {
           const image = getImage(edge.node.cardImage)
           return (
             <div key={edge} className={classes.paper}>
-              <GatsbyImage image={image} alt={edge.node.cardHeading} />
+              <GatsbyImage
+                image={image}
+                alt={edge.node.cardHeading}
+              />
               <Typography>
                 {edge.node.cardHeading}
               </Typography>

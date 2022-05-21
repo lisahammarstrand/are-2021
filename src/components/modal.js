@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import Modal from '@material-ui/core/Modal'
 import { Button } from '@material-ui/core'
 import useStyles from './styles'
@@ -9,16 +8,10 @@ const SimpleModal = () => {
 
   const classes = useStyles()
   const [open, setOpen] = useState()
-  const [currentImage, setCurrentImage] = useState(0)
 
-  const handleOpen = useCallback(({ index }) => {
-    setOpen(true)
-    setCurrentImage(index)
-  }, [])
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
-  const handleClose = () => {
-    setOpen(false)
-  }
 
   return (
     <div>

@@ -1,8 +1,6 @@
-import { classes } from "istanbul-lib-coverage"
 import * as React from "react"
 import Layout from "../components/layout"
-import { CssBaseLine, Typography, Button, Card, CardActions, CardContent, CardMedia, Container, Grid } from "@material-ui/core"
-import Modal from '@material-ui/core/Modal'
+import { Typography, Button, Card, CardActions, CardContent, CardMedia, Container, Grid } from "@material-ui/core"
 import useStyles from '../components/styles'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
@@ -53,11 +51,6 @@ const IndexPage = () => {
                   </Button>
                 </Link>
               </Grid>
-              {/* <Grid item>
-                <Button variant="outlined" color="primary">
-                  Alla bilder vinter
-                </Button>
-              </Grid> */}
             </Grid>
           </div>
         </Container>
@@ -83,9 +76,9 @@ const IndexPage = () => {
                     <Typography variant="caption">
                       {edge.node.cardDate}
                     </Typography>
-                    <CardActions>
-                      <SimpleModal />
-                    </CardActions>
+                    {/* <CardActions> */}
+                    <SimpleModal />
+                    {/* </CardActions> */}
                   </CardContent>
                 </Card>
               </Grid>

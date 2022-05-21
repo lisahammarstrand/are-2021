@@ -31,9 +31,10 @@ const ImageCard = ({ cardImage, alt, cardHeading, cardDescription, cardDate }) =
         <Typography>
           {cardDescription}
         </Typography>
-        <CardActions>
-          <Button size="small" color="primary">Se bild</Button>
-        </CardActions>
+        {/* Commented out CardActions and button here since also implemented in Index file along with Modal}
+        {/*  <CardActions> */}
+        {/*  <Button size="small" color="primary">Se bild</Button> */}
+        {/*  </CardActions> */}
         <Typography variant="caption">
           {cardDate}
         </Typography>
