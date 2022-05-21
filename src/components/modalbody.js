@@ -5,7 +5,7 @@ import useStyles from './styles'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-/* Hur får man fram bara 1 bild, och rätt bild i resp Modal, nu hämtas alla bilder */
+/* How do you get only one image (and the right image) in each modal */
 const ModalBody = () => {
 
   const data = useStaticQuery(graphql`
@@ -15,9 +15,7 @@ const ModalBody = () => {
         node {
           cardImage {
             gatsbyImageData(layout: CONSTRAINED)
-            file {
-              fileName
-            }
+            id
           }
           cardHeading
           cardDate

@@ -1,5 +1,4 @@
 import React from "react";
-import Gallery from 'react-photo-gallery'
 import { Container, Grid } from '@material-ui/core'
 
 import useStyles from '../components/styles'

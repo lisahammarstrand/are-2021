@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { CssBaseline, AppBar, Toolbar, Typography, Button, Grid } from '@material-ui/core'
-import { classes } from 'istanbul-lib-coverage'
 import { PhotoCamera } from '@material-ui/icons'
 import useStyles from './styles'
 

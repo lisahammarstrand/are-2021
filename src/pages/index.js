@@ -1,11 +1,10 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { Typography, Button, Card, CardActions, CardContent, CardMedia, Container, Grid } from "@material-ui/core"
+import { Typography, Button, Card, CardContent, CardMedia, Container, Grid } from "@material-ui/core"
 import useStyles from '../components/styles'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import SimpleModal from "../components/modal"
-/* import ImageCard from "../components/imagecard" */
 import { Link } from 'gatsby'
 
 const IndexPage = () => {
@@ -76,9 +75,7 @@ const IndexPage = () => {
                     <Typography variant="caption">
                       {edge.node.cardDate}
                     </Typography>
-                    {/* <CardActions> */}
                     <SimpleModal />
-                    {/* </CardActions> */}
                   </CardContent>
                 </Card>
               </Grid>
